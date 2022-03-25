@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+       body {
+         background-color: lightblue;
+         tex-align: center;
+       }
+   </style>
+ </head>
+<body>
+  <script>
+    const AS_URL_BASE = "";
+
+ var url = document.location.href;
+ var k = url.substr(url.lastIndexOf("k=")+2);
+
+ if(k){  
+   fetch(AS_URL_BASE+'?k='+k)
+     .then(r => r.tex()) 
+     .then((r) => {
+       console.log(r);
+      //document.write(r);
+      if(r){
+          document.location.replace(r);
+        }
+      })
+      .catch(err => console.log(err))
+    {
+  
+    
+  </script>
+  <div class="lds-ring"><div></div><div></div><div></div></div></div>
+  </body>
+</html>
